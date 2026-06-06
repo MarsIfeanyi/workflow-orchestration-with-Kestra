@@ -1,0 +1,33 @@
+id: 06_aws_kv
+namespace: zoomcamp
+
+tasks:
+  - id: aws_access_key_id
+    type: io.kestra.plugin.core.kv.Set
+    key: AWS_ACCESS_KEY_ID
+    kvType: STRING
+    value: "{{ secret('AWS_ACCESS_KEY_ID') }}"
+
+  - id: aws_secret_access_key
+    type: io.kestra.plugin.core.kv.Set
+    key: AWS_SECRET_ACCESS_KEY
+    kvType: STRING
+    value: "{{ secret('AWS_SECRET_ACCESS_KEY') }}"
+
+  - id: aws_region
+    type: io.kestra.plugin.core.kv.Set
+    key: AWS_REGION
+    kvType: STRING
+    value: eu-west-1
+
+  - id: aws_bucket_name
+    type: io.kestra.plugin.core.kv.Set
+    key: AWS_BUCKET_NAME
+    kvType: STRING
+    value: kestra-zoomcamp-miu
+
+  - id: aws_dataset
+    type: io.kestra.plugin.core.kv.Set
+    key: AWS_DATASET
+    kvType: STRING
+    value: zoomcamp
