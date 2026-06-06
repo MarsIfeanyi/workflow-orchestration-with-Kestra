@@ -6,13 +6,13 @@ tasks:
     type: io.kestra.plugin.core.kv.Set
     key: AWS_ACCESS_KEY_ID
     kvType: STRING
-    value: "{{ secret('AWS_ACCESS_KEY_ID') }}"
+    value: "{{ kv('AWS_ACCESS_KEY_ID') }}"
 
   - id: aws_secret_access_key
     type: io.kestra.plugin.core.kv.Set
     key: AWS_SECRET_ACCESS_KEY
     kvType: STRING
-    value: "{{ secret('AWS_SECRET_ACCESS_KEY') }}"
+    value: "{{ kv('AWS_SECRET_ACCESS_KEY') }}"
 
   - id: aws_region
     type: io.kestra.plugin.core.kv.Set
